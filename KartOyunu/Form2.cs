@@ -85,6 +85,7 @@ namespace KartOyunu
             target_card.Visible = true;
         }
 
+        //Switch-Case yapısı seçilen kart ile eşlenmesi gereken kartın değerlerini kontrol ediyor.
         public void controlCard(int cardVal, string cardName)
         { 
             int targetVal = Convert.ToInt32(deck[sec_deck_loc].Substring(1));
@@ -374,6 +375,7 @@ namespace KartOyunu
 
         }
 
+        //Kontrol için yazılmış hızlı tahta reset tuşu
         private void button1_Click(object sender, EventArgs e)
         {
             sec_deck_remaining = 19;
