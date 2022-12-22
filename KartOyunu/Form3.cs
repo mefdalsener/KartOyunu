@@ -24,6 +24,8 @@ namespace KartOyunu
 
         public List<string> deck;
 
+        int sec_deck_loc = 20;
+
         Boolean cardSwitch = false;
         public Form3()
         {
@@ -89,6 +91,7 @@ namespace KartOyunu
         //Switch-Case yapısı seçilen kart ile eşlenmesi gereken kartın değerlerini kontrol ediyor.
         public void controlCard(int cardVal, string cardName)
         {
+            
             int targetVal = Convert.ToInt32(deck[sec_deck_loc].Substring(1));
             switch (cardVal)
             {
