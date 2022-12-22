@@ -43,11 +43,7 @@ namespace KartOyunu
         {
             //0-19 arası kartlar eşleştirilmesi gereken 20 adet kart
             //20-39 arası kartlar ikincil destede bulunan kartlar
-            Card51.Image = Image.FromFile(deck_ad + deck[0] + ".jpg");
-            Card52.Image = Image.FromFile(deck_ad + deck[1] + ".jpg");
-            Card53.Image = Image.FromFile(deck_ad + deck[2] + ".jpg");
-            Card54.Image = Image.FromFile(deck_ad + deck[3] + ".jpg");
-            target_card.Image = Image.FromFile(deck_ad + deck[sec_deck_loc] + ".jpg");
+            target_card.Image = Image.FromFile(deck_ad + deck[0] + ".jpg");
             Card11.Visible = true;
             Card11.Image = Image.FromFile(deck_ad + "DeckBack.jpg");
             Card12.Visible = true;
@@ -81,9 +77,13 @@ namespace KartOyunu
             Card44.Visible = true;
             Card44.Image = Image.FromFile(deck_ad + "DeckBack.jpg");
             Card51.Visible = true;
+            Card44.Image = Image.FromFile(deck_ad + "DeckBack.jpg");
             Card52.Visible = true;
+            Card44.Image = Image.FromFile(deck_ad + "DeckBack.jpg");
             Card53.Visible = true;
+            Card44.Image = Image.FromFile(deck_ad + "DeckBack.jpg");
             Card54.Visible = true;
+            Card44.Image = Image.FromFile(deck_ad + "DeckBack.jpg");
             second_deck.Visible = true;
             target_card.Visible = true;
         }
@@ -167,12 +167,7 @@ namespace KartOyunu
                     break;
             }
         }
-        private int selectRandomCard()
-        {
-            int randomCard;
-            randomCard = random.Next(0, deck.Count);
-            return randomCard;
-        }
+
 
         //Oyun kartlarının oluşturmasını başlatır:
         public void PlayCard()
@@ -185,7 +180,6 @@ namespace KartOyunu
             foreach (string card in deck)
             {
                 Console.WriteLine(card);
-
             }
         }
 
@@ -218,14 +212,6 @@ namespace KartOyunu
             }
         }
 
-        private void second_deck_Click(object sender, EventArgs e)
-        {
-
-            uint X = (uint)Cursor.Position.X;
-            uint Y = (uint)Cursor.Position.Y;
-
-        }
-
         private void second_deck_MouseClick(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
@@ -235,23 +221,6 @@ namespace KartOyunu
                 target_card.Image = Image.FromFile(deck_ad + deck[sec_deck_loc] + ".jpg");
                 sec_deck_remaining--;
                 Left_cards.Text = ("Kalan Kart:" + sec_deck_remaining);
-                if (sec_deck_remaining == 0)
-                {
-                    second_deck.Visible = false;
-                    if (Left_click != 0)
-                    {
-                        Reset.Text = ("YENİDEN\nDAĞIT\n\nKALAN HAK:" + Left_click);
-                        Reset.Visible = true;
-                    }
-                    else
-                    {
-                        Reset.Text = "YENİDEN DAĞITMA HAKKINIZ KALMADI";
-                        Reset.Visible = true;
-                    }
-
-                }
-
-
             }
         }
         int Left_click = 2;
@@ -271,10 +240,14 @@ namespace KartOyunu
 
         }
 
+        private void drawCard()
+        {
+            int cardValue = Convert.ToInt32(deck[0].Substring(1));
+        }
         private void Card54_Click(object sender, EventArgs e)
         {
-            int valCard = Convert.ToInt32(deck[3].Substring(1));
-            controlCard(valCard, (deck_ad + deck[3] + ".jpg"));
+            int cardVal = Convert.ToInt32(deck[3].Substring(1));
+            controlCard(cardVal, (deck_ad + deck[3] + ".jpg"));
             if (cardSwitch == true)
             {
                 Card54.Visible = false;

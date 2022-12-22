@@ -270,8 +270,8 @@ namespace KartOyunu
 
         private void Card54_Click(object sender, EventArgs e)
         {
-            int valCard = Convert.ToInt32(deck[3].Substring(1));
-            controlCard(valCard, (deck_ad + deck[3] + ".jpg"));
+            int cardVal = Convert.ToInt32(deck[3].Substring(1));
+            controlCard(cardVal, (deck_ad + deck[3] + ".jpg"));
             if(cardSwitch == true)
             {
                 Card54.Visible = false;
