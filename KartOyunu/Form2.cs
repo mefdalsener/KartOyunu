@@ -22,6 +22,8 @@ namespace KartOyunu
         public static string[] value = new string[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" };
 
         public List<string> deck;
+
+        Boolean cardSwitch = false;
         public Form2()
         {
             InitializeComponent();
@@ -77,6 +79,7 @@ namespace KartOyunu
                     {
                         Console.WriteLine(cardName);
                         target_card.Image = Image.FromFile(cardName);
+                        cardSwitch = true;
                     }
                     break;
                 case 2:
@@ -84,6 +87,7 @@ namespace KartOyunu
                     {
                         Console.WriteLine(cardName);
                         target_card.Image = Image.FromFile(cardName);
+                        cardSwitch = true;
                     }
                     break;
                 case 3:
@@ -91,6 +95,7 @@ namespace KartOyunu
                     {
                         Console.WriteLine(cardName);
                         target_card.Image = Image.FromFile(cardName);
+                        cardSwitch = true;
                     }
                     break;
                 case 4:
@@ -98,6 +103,7 @@ namespace KartOyunu
                     {
                         Console.WriteLine(cardName);
                         target_card.Image = Image.FromFile(cardName);
+                        cardSwitch = true;
                     }
                     break;
                 case 5:
@@ -105,6 +111,7 @@ namespace KartOyunu
                     {
                         Console.WriteLine(cardName);
                         target_card.Image = Image.FromFile(cardName);
+                        cardSwitch = true;
                     }
                     break;
                 case 6:
@@ -112,6 +119,7 @@ namespace KartOyunu
                     {
                         Console.WriteLine(cardName);
                         target_card.Image = Image.FromFile(cardName);
+                        cardSwitch = true;
                     }
                     break;
                 case 7:
@@ -119,6 +127,7 @@ namespace KartOyunu
                     {
                         Console.WriteLine(cardName);
                         target_card.Image = Image.FromFile(cardName);
+                        cardSwitch = true;
                     }
                     break;
                 case 8:
@@ -126,6 +135,7 @@ namespace KartOyunu
                     {
                         Console.WriteLine(cardName);
                         target_card.Image = Image.FromFile(cardName);
+                        cardSwitch = true;
                     }
                     break;
                 case 9:
@@ -133,6 +143,7 @@ namespace KartOyunu
                     {
                         Console.WriteLine(cardName);
                         target_card.Image = Image.FromFile(cardName);
+                        cardSwitch = true;
                     }
                     break;
                 case 10:
@@ -140,6 +151,7 @@ namespace KartOyunu
                     {
                         Console.WriteLine(cardName);
                         target_card.Image = Image.FromFile(cardName);
+                        cardSwitch = true;
                     }
                     break;
             }
@@ -255,6 +267,13 @@ namespace KartOyunu
             int valCard = Convert.ToInt32(deck[3].Substring(1));
             Console.WriteLine(valCard + (  deck_ad + deck[3] + ".jpg"   ) + deck[sec_deck_loc].Substring(1));
             controlCard(valCard, (deck_ad + deck[3] + ".jpg"));
+            if(cardSwitch == true)
+            {
+                Card54.Visible = false;
+                cardSwitch = false;
+                Card44.Image = Image.FromFile(deck_ad + deck[7] + ".jpg");
+            }
+
         }
 
         private void Card44_Click(object sender, EventArgs e)
