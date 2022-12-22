@@ -23,5 +23,10 @@ namespace KartOyunu
             form2.Show();
             this.Hide();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            label1.Text = "         ** Oyun rastgeledir **\nRastgele oyun tahtaları çözülemez olabilir.";
+        }
     }
 }

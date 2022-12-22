@@ -51,6 +51,8 @@
             this.Card31 = new System.Windows.Forms.PictureBox();
             this.Card21 = new System.Windows.Forms.PictureBox();
             this.Card11 = new System.Windows.Forms.PictureBox();
+            this.Reset = new System.Windows.Forms.Button();
+            this.Left_cards = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.target_card)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.second_deck)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Card54)).BeginInit();
@@ -94,6 +96,8 @@
             this.second_deck.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.second_deck.TabIndex = 46;
             this.second_deck.TabStop = false;
+            this.second_deck.Click += new System.EventHandler(this.second_deck_Click);
+            this.second_deck.MouseClick += new System.Windows.Forms.MouseEventHandler(this.second_deck_MouseClick);
             // 
             // Card54
             // 
@@ -295,11 +299,35 @@
             this.Card11.TabIndex = 26;
             this.Card11.TabStop = false;
             // 
+            // Reset
+            // 
+            this.Reset.Font = new System.Drawing.Font("Comic Sans MS", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.Reset.Location = new System.Drawing.Point(391, 411);
+            this.Reset.Name = "Reset";
+            this.Reset.Size = new System.Drawing.Size(121, 162);
+            this.Reset.TabIndex = 48;
+            this.Reset.Text = "YENİDEN DAĞIT";
+            this.Reset.UseVisualStyleBackColor = true;
+            this.Reset.Visible = false;
+            this.Reset.Click += new System.EventHandler(this.Reset_Click);
+            // 
+            // Left_cards
+            // 
+            this.Left_cards.AutoSize = true;
+            this.Left_cards.Font = new System.Drawing.Font("Comic Sans MS", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.Left_cards.Location = new System.Drawing.Point(387, 385);
+            this.Left_cards.Name = "Left_cards";
+            this.Left_cards.Size = new System.Drawing.Size(56, 23);
+            this.Left_cards.TabIndex = 49;
+            this.Left_cards.Text = "label1";
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1064, 608);
+            this.Controls.Add(this.Left_cards);
+            this.Controls.Add(this.Reset);
             this.Controls.Add(this.target_card);
             this.Controls.Add(this.second_deck);
             this.Controls.Add(this.Card54);
@@ -348,6 +376,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.Card21)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Card11)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -375,5 +404,7 @@
         private System.Windows.Forms.PictureBox Card31;
         private System.Windows.Forms.PictureBox Card21;
         private System.Windows.Forms.PictureBox Card11;
+        private System.Windows.Forms.Button Reset;
+        private System.Windows.Forms.Label Left_cards;
     }
 }
