@@ -46,21 +46,37 @@ namespace KartOyunu
             Card54.Image = Image.FromFile(deck_ad + deck[3] + ".jpg");
             target_card.Image = Image.FromFile(deck_ad + deck[sec_deck_loc] + ".jpg");
             Card11.Visible = true;
+            Card11.Image = Image.FromFile(deck_ad + "DeckBack.jpg");
             Card12.Visible = true;
+            Card12.Image = Image.FromFile(deck_ad + "DeckBack.jpg");
             Card13.Visible = true;
+            Card13.Image = Image.FromFile(deck_ad + "DeckBack.jpg");
             Card14.Visible = true;
+            Card14.Image = Image.FromFile(deck_ad + "DeckBack.jpg");
             Card21.Visible = true;
+            Card21.Image = Image.FromFile(deck_ad + "DeckBack.jpg");
             Card22.Visible = true;
+            Card22.Image = Image.FromFile(deck_ad + "DeckBack.jpg");
             Card23.Visible = true;
+            Card23.Image = Image.FromFile(deck_ad + "DeckBack.jpg");
             Card24.Visible = true;
+            Card24.Image = Image.FromFile(deck_ad + "DeckBack.jpg");
             Card31.Visible = true;
+            Card31.Image = Image.FromFile(deck_ad + "DeckBack.jpg");
             Card32.Visible = true;
+            Card32.Image = Image.FromFile(deck_ad + "DeckBack.jpg");
             Card33.Visible = true;
+            Card33.Image = Image.FromFile(deck_ad + "DeckBack.jpg");
             Card34.Visible = true;
+            Card34.Image = Image.FromFile(deck_ad + "DeckBack.jpg");
             Card41.Visible = true;
+            Card41.Image = Image.FromFile(deck_ad + "DeckBack.jpg");
             Card42.Visible = true;
+            Card42.Image = Image.FromFile(deck_ad + "DeckBack.jpg");
             Card43.Visible = true;
+            Card43.Image = Image.FromFile(deck_ad + "DeckBack.jpg");
             Card44.Visible = true;
+            Card44.Image = Image.FromFile(deck_ad + "DeckBack.jpg");
             Card51.Visible = true;
             Card52.Visible = true;
             Card53.Visible = true;
@@ -174,10 +190,8 @@ namespace KartOyunu
             foreach (string card in deck)
             {
                 Console.WriteLine(card);
-                
-               
+
             }
-            Console.WriteLine(Card11.Name);
         }
         
         //suits ve value listelerini kullanarak bir deste kart oluşurulur:
