@@ -15,6 +15,7 @@ namespace KartOyunu
         Random random = new Random();
         //deck_ad kartların bulunduğu klasörün adresidir...
         public string deck_ad = @"C:\Users\HalaycıKedi\OneDrive\Masaüstü\Deck\";
+
         public int sec_deck_loc = 20;
         public int sec_deck_remaining = 19;
 
