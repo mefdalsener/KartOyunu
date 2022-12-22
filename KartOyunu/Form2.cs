@@ -66,6 +66,84 @@ namespace KartOyunu
             second_deck.Visible = true;
             target_card.Visible = true;
         }
+
+        public void controlCard(int cardVal, string cardName)
+        { 
+            int targetVal = Convert.ToInt32(deck[sec_deck_loc].Substring(1));
+            switch(cardVal)
+            {
+                case 1:
+                    if(cardVal-1 == targetVal || cardVal+1 == targetVal)
+                    {
+                        Console.WriteLine(cardName);
+                        target_card.Image = Image.FromFile(cardName);
+                    }
+                    break;
+                case 2:
+                    if (cardVal - 1 == targetVal || cardVal + 1 == targetVal)
+                    {
+                        Console.WriteLine(cardName);
+                        target_card.Image = Image.FromFile(cardName);
+                    }
+                    break;
+                case 3:
+                    if (cardVal - 1 == targetVal || cardVal + 1 == targetVal)
+                    {
+                        Console.WriteLine(cardName);
+                        target_card.Image = Image.FromFile(cardName);
+                    }
+                    break;
+                case 4:
+                    if (cardVal - 1 == targetVal || cardVal + 1 == targetVal)
+                    {
+                        Console.WriteLine(cardName);
+                        target_card.Image = Image.FromFile(cardName);
+                    }
+                    break;
+                case 5:
+                    if (cardVal - 1 == targetVal || cardVal + 1 == targetVal)
+                    {
+                        Console.WriteLine(cardName);
+                        target_card.Image = Image.FromFile(cardName);
+                    }
+                    break;
+                case 6:
+                    if (cardVal - 1 == targetVal || cardVal + 1 == targetVal)
+                    {
+                        Console.WriteLine(cardName);
+                        target_card.Image = Image.FromFile(cardName);
+                    }
+                    break;
+                case 7:
+                    if (cardVal - 1 == targetVal || cardVal + 1 == targetVal)
+                    {
+                        Console.WriteLine(cardName);
+                        target_card.Image = Image.FromFile(cardName);
+                    }
+                    break;
+                case 8:
+                    if (cardVal - 1 == targetVal || cardVal + 1 == targetVal)
+                    {
+                        Console.WriteLine(cardName);
+                        target_card.Image = Image.FromFile(cardName);
+                    }
+                    break;
+                case 9:
+                    if (cardVal - 1 == targetVal || cardVal + 1 == targetVal)
+                    {
+                        Console.WriteLine(cardName);
+                        target_card.Image = Image.FromFile(cardName);
+                    }
+                    break;
+                case 10:
+                    if (cardVal - 1 == targetVal || cardVal + 1 == targetVal)
+                    {
+                        Console.WriteLine(cardName);
+                        target_card.Image = Image.FromFile(cardName);
+                    }
+                    break;
+            }
+        }
         private int selectRandomCard()
         {
             int randomCard;
@@ -84,7 +162,10 @@ namespace KartOyunu
             foreach (string card in deck)
             {
                 Console.WriteLine(card);
+                
+               
             }
+            Console.WriteLine(Card11.Name);
         }
         
         //suits ve value listelerini kullanarak bir deste kart oluşurulur:
@@ -167,6 +248,116 @@ namespace KartOyunu
             }
             
 
+        }
+
+        private void Card54_Click(object sender, EventArgs e)
+        {
+            int valCard = Convert.ToInt32(deck[3].Substring(1));
+            Console.WriteLine(valCard + (  deck_ad + deck[3] + ".jpg"   ) + deck[sec_deck_loc].Substring(1));
+            controlCard(valCard, (deck_ad + deck[3] + ".jpg"));
+        }
+
+        private void Card44_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Card34_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Card24_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Card14_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Card53_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Card43_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Card33_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Card23_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Card13_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Card52_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Card42_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Card32_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Card22_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Card12_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Card51_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Card41_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Card31_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Card21_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Card11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            sec_deck_remaining = 19;
+            sec_deck_loc = 20;
+            PlayCard();
+            visible_table();
         }
     }
 }
