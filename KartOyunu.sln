@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32901.215
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KartOyunu", "KartOyunu\KartOyunu.csproj", "{C479B39D-1871-4D2F-B738-375F318C6BF7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C479B39D-1871-4D2F-B738-375F318C6BF7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C479B39D-1871-4D2F-B738-375F318C6BF7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C479B39D-1871-4D2F-B738-375F318C6BF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C479B39D-1871-4D2F-B738-375F318C6BF7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D734ABB0-98A9-41B1-ADBE-89B5EDAD94B3}
+	EndGlobalSection
+EndGlobal
