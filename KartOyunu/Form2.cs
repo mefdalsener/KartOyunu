@@ -93,7 +93,6 @@ namespace KartOyunu
                 case 1:
                     if(cardVal-1 == targetVal || cardVal+1 == targetVal)
                     {
-                        Console.WriteLine(cardName);
                         target_card.Image = Image.FromFile(cardName);
                         cardSwitch = true;
                     }
@@ -101,7 +100,6 @@ namespace KartOyunu
                 case 2:
                     if (cardVal - 1 == targetVal || cardVal + 1 == targetVal)
                     {
-                        Console.WriteLine(cardName);
                         target_card.Image = Image.FromFile(cardName);
                         cardSwitch = true;
                     }
@@ -109,7 +107,6 @@ namespace KartOyunu
                 case 3:
                     if (cardVal - 1 == targetVal || cardVal + 1 == targetVal)
                     {
-                        Console.WriteLine(cardName);
                         target_card.Image = Image.FromFile(cardName);
                         cardSwitch = true;
                     }
@@ -117,7 +114,6 @@ namespace KartOyunu
                 case 4:
                     if (cardVal - 1 == targetVal || cardVal + 1 == targetVal)
                     {
-                        Console.WriteLine(cardName);
                         target_card.Image = Image.FromFile(cardName);
                         cardSwitch = true;
                     }
@@ -125,7 +121,6 @@ namespace KartOyunu
                 case 5:
                     if (cardVal - 1 == targetVal || cardVal + 1 == targetVal)
                     {
-                        Console.WriteLine(cardName);
                         target_card.Image = Image.FromFile(cardName);
                         cardSwitch = true;
                     }
@@ -133,7 +128,6 @@ namespace KartOyunu
                 case 6:
                     if (cardVal - 1 == targetVal || cardVal + 1 == targetVal)
                     {
-                        Console.WriteLine(cardName);
                         target_card.Image = Image.FromFile(cardName);
                         cardSwitch = true;
                     }
@@ -141,7 +135,6 @@ namespace KartOyunu
                 case 7:
                     if (cardVal - 1 == targetVal || cardVal + 1 == targetVal)
                     {
-                        Console.WriteLine(cardName);
                         target_card.Image = Image.FromFile(cardName);
                         cardSwitch = true;
                     }
@@ -149,7 +142,6 @@ namespace KartOyunu
                 case 8:
                     if (cardVal - 1 == targetVal || cardVal + 1 == targetVal)
                     {
-                        Console.WriteLine(cardName);
                         target_card.Image = Image.FromFile(cardName);
                         cardSwitch = true;
                     }
@@ -157,7 +149,6 @@ namespace KartOyunu
                 case 9:
                     if (cardVal - 1 == targetVal || cardVal + 1 == targetVal)
                     {
-                        Console.WriteLine(cardName);
                         target_card.Image = Image.FromFile(cardName);
                         cardSwitch = true;
                     }
@@ -165,7 +156,6 @@ namespace KartOyunu
                 case 10:
                     if (cardVal - 1 == targetVal || cardVal + 1 == targetVal)
                     {
-                        Console.WriteLine(cardName);
                         target_card.Image = Image.FromFile(cardName);
                         cardSwitch = true;
                     }
@@ -279,7 +269,6 @@ namespace KartOyunu
         private void Card54_Click(object sender, EventArgs e)
         {
             int valCard = Convert.ToInt32(deck[3].Substring(1));
-            Console.WriteLine(valCard + (  deck_ad + deck[3] + ".jpg"   ) + deck[sec_deck_loc].Substring(1));
             controlCard(valCard, (deck_ad + deck[3] + ".jpg"));
             if(cardSwitch == true)
             {
