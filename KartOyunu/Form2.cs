@@ -13,6 +13,7 @@ namespace KartOyunu
     public partial class Form2 : Form
     {
         Random random = new Random();
+        //deck_ad kartların bulunduğu klasörün adresidir...
         public string deck_ad = @"C:\Users\HalaycıKedi\OneDrive\Masaüstü\Deck\";
         public int sec_deck_loc = 20;
         public int sec_deck_remaining = 19;
@@ -79,6 +80,7 @@ namespace KartOyunu
             Shuffle(deck);
 
             //Bu kısım test amaçlıdır. GenerateDeck() ve Shuffle() çalışıyor mu diye kontrol edilir (Çıktı olarak verir):
+            Console.WriteLine("Elinizdeki deste : ");
             foreach (string card in deck)
             {
                 Console.WriteLine(card);
@@ -134,21 +136,36 @@ namespace KartOyunu
                 if (sec_deck_remaining == 0)
                 {
                     second_deck.Visible = false;
-                    Reset.Visible = true;
+                    if (Left_click != 0)
+                    {
+                        Reset.Text = ("YENİDEN\nDAĞIT\n\nKALAN HAK:" + Left_click);
+                        Reset.Visible = true;
+                    }
+                    else
+                    {
+                        Reset.Text = "YENİDEN DAĞITMA HAKKINIZ KALMADI";
+                        Reset.Visible = true;
+                    }
+                        
                 }
                     
 
             }
         }
-
+        int Left_click = 2; 
         private void Reset_Click(object sender, EventArgs e)
         {
-            Reset.Visible = false;
-            sec_deck_remaining = 19;
-            sec_deck_loc = 20;
-            PlayCard();
-            visible_table();
-            Left_cards.Text = ("Kalan Kart:" + sec_deck_remaining);
+            if(Left_click != 0)
+            {
+                Left_click--;
+                Reset.Visible = false;
+                sec_deck_remaining = 19;
+                sec_deck_loc = 20;
+                PlayCard();
+                visible_table();
+                Left_cards.Text = ("Kalan Kart:" + sec_deck_remaining);
+            }
+            
 
         }
     }
