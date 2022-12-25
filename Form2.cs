@@ -14,7 +14,7 @@ namespace KartOyunu
     {
         Random random = new Random();
         //deck_ad kartların bulunduğu klasörün adresidir...
-        public string deck_ad = @"C:\Users\HalaycıKedi\OneDrive\Masaüstü\Deck\";
+        public string deck_ad = @"C:\Users\Akif\Desktop\KartOyunu-master\KartOyunu\assets\Deck\";
 
         public int sec_deck_loc = 20;
         public int sec_deck_remaining = 19;
@@ -23,6 +23,7 @@ namespace KartOyunu
         public static string[] value = new string[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" };
 
         public List<string> deck;
+        public int currentCard;
 
         Boolean cardSwitch = false;
         public Form2()
@@ -35,8 +36,11 @@ namespace KartOyunu
             PlayCard();
             visible_table();
             Left_cards.Text = ("Kalan Kart:" + sec_deck_remaining);
+            label1.Text = "0";
+            timer1.Interval = 1000;
+            timer1.Start();
         }
-
+        int sayac = 0;
         public void visible_table()
         {
             //0-19 arası kartlar eşleştirilmesi gereken 20 adet kart
@@ -89,7 +93,7 @@ namespace KartOyunu
         //Switch-Case yapısı seçilen kart ile eşlenmesi gereken kartın değerlerini kontrol ediyor.
         public void controlCard(int cardVal, string cardName)
         { 
-            int targetVal = Convert.ToInt32(deck[sec_deck_loc].Substring(1));
+            int targetVal = Convert.ToInt32(deck[currentCard].Substring(1));
             switch(cardVal)
             {
                 case 1:
@@ -177,6 +181,7 @@ namespace KartOyunu
             deck = GenerateDeck();
             Shuffle(deck);
 
+            currentCard = sec_deck_loc;
             //Bu kısım test amaçlıdır. GenerateDeck() ve Shuffle() çalışıyor mu diye kontrol edilir (Çıktı olarak verir):
             Console.WriteLine("Elinizdeki deste : ");
             foreach (string card in deck)
@@ -229,6 +234,7 @@ namespace KartOyunu
             {
                 
                 sec_deck_loc++;
+                currentCard = sec_deck_loc;
                 target_card.Image = Image.FromFile(deck_ad + deck[sec_deck_loc] + ".jpg");
                 sec_deck_remaining--;
                 Left_cards.Text = ("Kalan Kart:" + sec_deck_remaining);
@@ -260,6 +266,7 @@ namespace KartOyunu
                 Reset.Visible = false;
                 sec_deck_remaining = 19;
                 sec_deck_loc = 20;
+                currentCard = sec_deck_loc;
                 PlayCard();
                 visible_table();
                 Left_cards.Text = ("Kalan Kart:" + sec_deck_remaining);
@@ -272,10 +279,11 @@ namespace KartOyunu
         {
             int cardVal = Convert.ToInt32(deck[3].Substring(1));
             controlCard(cardVal, (deck_ad + deck[3] + ".jpg"));
-            if(cardSwitch == true)
+            if (cardSwitch == true)
             {
                 Card54.Visible = false;
                 cardSwitch = false;
+                currentCard = 3;
                 Card44.Image = Image.FromFile(deck_ad + deck[7] + ".jpg");
             }
 
@@ -289,6 +297,7 @@ namespace KartOyunu
             {
                 Card44.Visible = false;
                 cardSwitch = false;
+                currentCard = 7; 
                 Card34.Image = Image.FromFile(deck_ad + deck[11] + ".jpg");
             }
         }
@@ -301,6 +310,7 @@ namespace KartOyunu
             {
                 Card34.Visible = false;
                 cardSwitch = false;
+                currentCard = 11;
                 Card24.Image = Image.FromFile(deck_ad + deck[15] + ".jpg");
             }
         }
@@ -313,6 +323,7 @@ namespace KartOyunu
             {
                 Card24.Visible = false;
                 cardSwitch = false;
+                currentCard = 15;
                 Card14.Image = Image.FromFile(deck_ad + deck[19] + ".jpg");
             }
         }
@@ -321,6 +332,12 @@ namespace KartOyunu
         {
             int cardVal = Convert.ToInt32(deck[19].Substring(1));
             controlCard(cardVal, (deck_ad + deck[19] + ".jpg"));
+            if (cardSwitch == true)
+            {
+                Card14.Visible = false;
+                cardSwitch = false;
+                currentCard = 19;
+            }
         }
 
         private void Card53_Click(object sender, EventArgs e)
@@ -331,6 +348,7 @@ namespace KartOyunu
             {
                 Card53.Visible = false;
                 cardSwitch = false;
+                currentCard = 2;
                 Card43.Image = Image.FromFile(deck_ad + deck[6] + ".jpg");
             }
         }
@@ -343,6 +361,7 @@ namespace KartOyunu
             {
                 Card43.Visible = false;
                 cardSwitch = false;
+                currentCard = 6;
                 Card33.Image = Image.FromFile(deck_ad + deck[10] + ".jpg");
             }
         }
@@ -355,6 +374,7 @@ namespace KartOyunu
             {
                 Card33.Visible = false;
                 cardSwitch = false;
+                currentCard = 10;
                 Card23.Image = Image.FromFile(deck_ad + deck[14] + ".jpg");
             }
         }
@@ -367,6 +387,7 @@ namespace KartOyunu
             {
                 Card23.Visible = false;
                 cardSwitch = false;
+                currentCard = 14;
                 Card13.Image = Image.FromFile(deck_ad + deck[18] + ".jpg");
             }
         }
@@ -375,6 +396,12 @@ namespace KartOyunu
         {
             int cardVal = Convert.ToInt32(deck[18].Substring(1));
             controlCard(cardVal, (deck_ad + deck[18] + ".jpg"));
+            if (cardSwitch == true)
+            {
+                Card13.Visible = false;
+                cardSwitch = false;
+                currentCard = 18;
+            }
         }
 
         private void Card52_Click(object sender, EventArgs e)
@@ -385,6 +412,7 @@ namespace KartOyunu
             {
                 Card52.Visible = false;
                 cardSwitch = false;
+                currentCard = 1;
                 Card42.Image = Image.FromFile(deck_ad + deck[5] + ".jpg");
             }
         }
@@ -397,6 +425,7 @@ namespace KartOyunu
             {
                 Card42.Visible = false;
                 cardSwitch = false;
+                currentCard = 5;
                 Card32.Image = Image.FromFile(deck_ad + deck[9] + ".jpg");
             }
         }
@@ -409,6 +438,7 @@ namespace KartOyunu
             {
                 Card32.Visible = false;
                 cardSwitch = false;
+                currentCard = 9;
                 Card22.Image = Image.FromFile(deck_ad + deck[13] + ".jpg");
             }
         }
@@ -421,6 +451,7 @@ namespace KartOyunu
             {
                 Card22.Visible = false;
                 cardSwitch = false;
+                currentCard = 13;
                 Card12.Image = Image.FromFile(deck_ad + deck[17] + ".jpg");
             }
         }
@@ -429,6 +460,12 @@ namespace KartOyunu
         {
             int cardVal = Convert.ToInt32(deck[17].Substring(1));
             controlCard(cardVal, (deck_ad + deck[17] + ".jpg"));
+            if (cardSwitch == true)
+            {
+                Card12.Visible = false;
+                cardSwitch = false;
+                currentCard = 17;
+            }
         }
 
         private void Card51_Click(object sender, EventArgs e)
@@ -439,6 +476,7 @@ namespace KartOyunu
             {
                 Card51.Visible = false;
                 cardSwitch = false;
+                currentCard = 0;
                 Card41.Image = Image.FromFile(deck_ad + deck[4] + ".jpg");
             }
         }
@@ -451,6 +489,7 @@ namespace KartOyunu
             {
                 Card41.Visible = false;
                 cardSwitch = false;
+                currentCard = 4;
                 Card31.Image = Image.FromFile(deck_ad + deck[8] + ".jpg");
             }
         }
@@ -463,6 +502,7 @@ namespace KartOyunu
             {
                 Card31.Visible = false;
                 cardSwitch = false;
+                currentCard = 8;
                 Card21.Image = Image.FromFile(deck_ad + deck[12] + ".jpg");
             }
         }
@@ -475,6 +515,7 @@ namespace KartOyunu
             {
                 Card21.Visible = false;
                 cardSwitch = false;
+                currentCard = 12;
                 Card11.Image = Image.FromFile(deck_ad + deck[16] + ".jpg");
             }
         }
@@ -483,6 +524,13 @@ namespace KartOyunu
         {
             int cardVal = Convert.ToInt32(deck[16].Substring(1));
             controlCard(cardVal, (deck_ad + deck[16] + ".jpg"));
+            if (cardSwitch == true)
+            {
+                Card11.Visible = false;
+                cardSwitch = false;
+                currentCard = 16;
+                Card11.Image = Image.FromFile(deck_ad + deck[16] + ".jpg");
+            }
         }
 
         //Kontrol için yazılmış hızlı tahta reset tuşu
@@ -492,6 +540,18 @@ namespace KartOyunu
             sec_deck_loc = 20;
             PlayCard();
             visible_table();
+        }
+
+       
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            sayac++;
+            label1.Text = sayac.ToString();
+            if(Card11.Visible ==false && Card12.Visible == false && Card13.Visible == false && Card14.Visible == false)       
+            {
+                           timer1.Stop();
+            }
         }
     }
 }
