@@ -14,7 +14,7 @@ namespace KartOyunu
     {
         Random random = new Random();
         //deck_ad kartların bulunduğu klasörün adresidir...
-        public string deck_ad = @"C:\Users\HalaycıKedi\OneDrive\Masaüstü\Deck\";
+        public string deck_ad = @"C:\Users\HalaycıKedi\OneDrive\Masaüstü\Lessons\Deck\";
 
         public int sec_deck_loc = 20;
         public int sec_deck_remaining = 19;
@@ -32,7 +32,7 @@ namespace KartOyunu
         }
 
         private void Form2_Load(object sender, EventArgs e)
-        {
+        {            
             PlayCard();
             visible_table();
             Left_cards.Text = ("Kalan Kart:" + sec_deck_remaining);
@@ -42,6 +42,7 @@ namespace KartOyunu
         {
             //0-19 arası kartlar eşleştirilmesi gereken 20 adet kart
             //20-39 arası kartlar ikincil destede bulunan kartlar
+            Left_cards.Text = ("Kalan Kart:" + sec_deck_remaining);
             Card51.Image = Image.FromFile(deck_ad + deck[0] + ".jpg");
             Card52.Image = Image.FromFile(deck_ad + deck[1] + ".jpg");
             Card53.Image = Image.FromFile(deck_ad + deck[2] + ".jpg");
@@ -84,7 +85,7 @@ namespace KartOyunu
             Card53.Visible = true;
             Card54.Visible = true;
             second_deck.Visible = true;
-            target_card.Visible = true;
+            target_card.Visible = true;            
         }
 
         //Switch-Case yapısı seçilen kart ile eşlenmesi gereken kartın değerlerini kontrol ediyor.
@@ -224,7 +225,7 @@ namespace KartOyunu
             uint Y = (uint)Cursor.Position.Y;
 
         }
-
+         //ikinci desteden kart alma:
         private void second_deck_MouseClick(object sender, MouseEventArgs e)
         {
             if(e.Button == MouseButtons.Left)
@@ -535,6 +536,7 @@ namespace KartOyunu
         {
             sec_deck_remaining = 19;
             sec_deck_loc = 20;
+            Reset.Visible = false;
             PlayCard();
             visible_table();
         }
