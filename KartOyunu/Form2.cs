@@ -7,11 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Media;
 
 namespace KartOyunu
 {
     public partial class Form2 : Form
     {
+
         Random random = new Random();
         //deck_ad kartların bulunduğu klasörün adresidir...
         public string deck_ad = @"C:\Users\HalaycıKedi\OneDrive\Masaüstü\Lessons\Deck\";
@@ -32,10 +34,14 @@ namespace KartOyunu
         }
 
         private void Form2_Load(object sender, EventArgs e)
-        {            
+        {
+            SoundPlayer snd = new SoundPlayer(Properties.Resources.start);
+            snd.Play();
+            label1.Text = ("TÜMÜNÜ\nYENİLE");
             PlayCard();
             visible_table();
             Left_cards.Text = ("Kalan Kart:" + sec_deck_remaining);
+            scoretab.Text = "0";
         }
 
         public void visible_table()
@@ -206,6 +212,8 @@ namespace KartOyunu
         //GenerateDeck()'de oluşturulan desteyi karmak için:
         void Shuffle<T>(List<T> list)
         {
+            SoundPlayer snd = new SoundPlayer(Properties.Resources.shuffle_card);
+            snd.Play();
             System.Random random = new System.Random();
             int n = list.Count;
             while (n > 1)
@@ -218,6 +226,30 @@ namespace KartOyunu
             }
         }
 
+        public void win()
+        {
+            SoundPlayer snd = new SoundPlayer(Properties.Resources.win);
+            snd.Play();
+        }
+        //Kontrol için yazılmış hızlı tahta reset tuşu
+        private void button1_Click(object sender, EventArgs e)
+        {
+            sec_deck_remaining = 19;
+            sec_deck_loc = 20;
+            Reset.Visible = false;
+            PlayCard();
+            visible_table();
+            Left_click = 2;
+        }
+
+        int score = 100;
+        int scoreTotal = 0;
+        public void scorePoint()
+        {
+            scoreTotal += score;
+            score += 50;
+            scoretab.Text = Convert.ToString(scoreTotal);
+        }
         private void second_deck_Click(object sender, EventArgs e)
         {
             
@@ -230,11 +262,13 @@ namespace KartOyunu
         {
             if(e.Button == MouseButtons.Left)
             {
-                
+                SoundPlayer snd = new SoundPlayer(Properties.Resources.Assets_Art_Audio_Sfx_Click);
+                snd.Play();
                 sec_deck_loc++;
                 currentCard = sec_deck_loc;
-                target_card.Image = Image.FromFile(deck_ad + deck[sec_deck_loc] + ".jpg");
+                target_card.Image = Image.FromFile(deck_ad + deck[sec_deck_loc] + ".jpg");                
                 sec_deck_remaining--;
+                score = 100;
                 Left_cards.Text = ("Kalan Kart:" + sec_deck_remaining);
                 if (sec_deck_remaining == 0)
                 {
@@ -283,6 +317,9 @@ namespace KartOyunu
                 cardSwitch = false;
                 currentCard = 3;
                 Card44.Image = Image.FromFile(deck_ad + deck[7] + ".jpg");
+                SoundPlayer snd = new SoundPlayer(Properties.Resources.card_sound);
+                snd.Play();
+                scorePoint();
             }
 
         }
@@ -297,6 +334,9 @@ namespace KartOyunu
                 cardSwitch = false;
                 currentCard = 7; 
                 Card34.Image = Image.FromFile(deck_ad + deck[11] + ".jpg");
+                SoundPlayer snd = new SoundPlayer(Properties.Resources.card_sound);
+                snd.Play();
+                scorePoint();
             }
         }
 
@@ -310,6 +350,9 @@ namespace KartOyunu
                 cardSwitch = false;
                 currentCard = 11;
                 Card24.Image = Image.FromFile(deck_ad + deck[15] + ".jpg");
+                SoundPlayer snd = new SoundPlayer(Properties.Resources.card_sound);
+                snd.Play();
+                scorePoint();
             }
         }
 
@@ -323,6 +366,9 @@ namespace KartOyunu
                 cardSwitch = false;
                 currentCard = 15;
                 Card14.Image = Image.FromFile(deck_ad + deck[19] + ".jpg");
+                SoundPlayer snd = new SoundPlayer(Properties.Resources.card_sound);
+                snd.Play();
+                scorePoint();
             }
         }
 
@@ -335,6 +381,9 @@ namespace KartOyunu
                 Card14.Visible = false;
                 cardSwitch = false;
                 currentCard = 19;
+                SoundPlayer snd = new SoundPlayer(Properties.Resources.card_sound);
+                snd.Play();
+                scorePoint();
             }
         }
 
@@ -348,6 +397,9 @@ namespace KartOyunu
                 cardSwitch = false;
                 currentCard = 2;
                 Card43.Image = Image.FromFile(deck_ad + deck[6] + ".jpg");
+                SoundPlayer snd = new SoundPlayer(Properties.Resources.card_sound);
+                snd.Play();
+                scorePoint();
             }
         }
 
@@ -361,6 +413,9 @@ namespace KartOyunu
                 cardSwitch = false;
                 currentCard = 6;
                 Card33.Image = Image.FromFile(deck_ad + deck[10] + ".jpg");
+                SoundPlayer snd = new SoundPlayer(Properties.Resources.card_sound);
+                snd.Play();
+                scorePoint();
             }
         }
 
@@ -374,6 +429,9 @@ namespace KartOyunu
                 cardSwitch = false;
                 currentCard = 10;
                 Card23.Image = Image.FromFile(deck_ad + deck[14] + ".jpg");
+                SoundPlayer snd = new SoundPlayer(Properties.Resources.card_sound);
+                snd.Play();
+                scorePoint();
             }
         }
 
@@ -387,6 +445,9 @@ namespace KartOyunu
                 cardSwitch = false;
                 currentCard = 14;
                 Card13.Image = Image.FromFile(deck_ad + deck[18] + ".jpg");
+                SoundPlayer snd = new SoundPlayer(Properties.Resources.card_sound);
+                snd.Play();
+                scorePoint();
             }
         }
 
@@ -399,6 +460,9 @@ namespace KartOyunu
                 Card13.Visible = false;
                 cardSwitch = false;
                 currentCard = 18;
+                SoundPlayer snd = new SoundPlayer(Properties.Resources.card_sound);
+                snd.Play();
+                scorePoint();
             }
         }
 
@@ -412,6 +476,9 @@ namespace KartOyunu
                 cardSwitch = false;
                 currentCard = 1;
                 Card42.Image = Image.FromFile(deck_ad + deck[5] + ".jpg");
+                SoundPlayer snd = new SoundPlayer(Properties.Resources.card_sound);
+                snd.Play();
+                scorePoint();
             }
         }
 
@@ -425,6 +492,9 @@ namespace KartOyunu
                 cardSwitch = false;
                 currentCard = 5;
                 Card32.Image = Image.FromFile(deck_ad + deck[9] + ".jpg");
+                SoundPlayer snd = new SoundPlayer(Properties.Resources.card_sound);
+                snd.Play();
+                scorePoint();
             }
         }
 
@@ -438,6 +508,9 @@ namespace KartOyunu
                 cardSwitch = false;
                 currentCard = 9;
                 Card22.Image = Image.FromFile(deck_ad + deck[13] + ".jpg");
+                SoundPlayer snd = new SoundPlayer(Properties.Resources.card_sound);
+                snd.Play();
+                scorePoint();
             }
         }
 
@@ -451,6 +524,9 @@ namespace KartOyunu
                 cardSwitch = false;
                 currentCard = 13;
                 Card12.Image = Image.FromFile(deck_ad + deck[17] + ".jpg");
+                SoundPlayer snd = new SoundPlayer(Properties.Resources.card_sound);
+                snd.Play();
+                scorePoint();
             }
         }
 
@@ -463,6 +539,9 @@ namespace KartOyunu
                 Card12.Visible = false;
                 cardSwitch = false;
                 currentCard = 17;
+                SoundPlayer snd = new SoundPlayer(Properties.Resources.card_sound);
+                snd.Play();
+                scorePoint();
             }
         }
 
@@ -476,6 +555,9 @@ namespace KartOyunu
                 cardSwitch = false;
                 currentCard = 0;
                 Card41.Image = Image.FromFile(deck_ad + deck[4] + ".jpg");
+                SoundPlayer snd = new SoundPlayer(Properties.Resources.card_sound);
+                snd.Play();
+                scorePoint();
             }
         }
 
@@ -489,6 +571,9 @@ namespace KartOyunu
                 cardSwitch = false;
                 currentCard = 4;
                 Card31.Image = Image.FromFile(deck_ad + deck[8] + ".jpg");
+                SoundPlayer snd = new SoundPlayer(Properties.Resources.card_sound);
+                snd.Play();
+                scorePoint();
             }
         }
 
@@ -502,6 +587,9 @@ namespace KartOyunu
                 cardSwitch = false;
                 currentCard = 8;
                 Card21.Image = Image.FromFile(deck_ad + deck[12] + ".jpg");
+                SoundPlayer snd = new SoundPlayer(Properties.Resources.card_sound);
+                snd.Play();
+                scorePoint();
             }
         }
 
@@ -515,6 +603,9 @@ namespace KartOyunu
                 cardSwitch = false;
                 currentCard = 12;
                 Card11.Image = Image.FromFile(deck_ad + deck[16] + ".jpg");
+                SoundPlayer snd = new SoundPlayer(Properties.Resources.card_sound);
+                snd.Play();
+                scorePoint();
             }
         }
 
@@ -528,17 +619,19 @@ namespace KartOyunu
                 cardSwitch = false;
                 currentCard = 16;
                 Card11.Image = Image.FromFile(deck_ad + deck[16] + ".jpg");
+                SoundPlayer snd = new SoundPlayer(Properties.Resources.card_sound);
+                snd.Play();
+                scorePoint();
             }
         }
 
-        //Kontrol için yazılmış hızlı tahta reset tuşu
-        private void button1_Click(object sender, EventArgs e)
+
+
+    
+
+        private void label1_Click(object sender, EventArgs e)
         {
-            sec_deck_remaining = 19;
-            sec_deck_loc = 20;
-            Reset.Visible = false;
-            PlayCard();
-            visible_table();
+            
         }
     }
 }

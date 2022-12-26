@@ -56,6 +56,8 @@
             this.Left_cards = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.label1 = new System.Windows.Forms.Label();
+            this.scoretab = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.target_card)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.second_deck)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Card54)).BeginInit();
@@ -348,13 +350,35 @@
             // button1
             // 
             this.button1.AutoSize = true;
-            this.button1.Location = new System.Drawing.Point(841, 432);
+            this.button1.Image = global::KartOyunu.Properties.Resources.Illustration3;
+            this.button1.Location = new System.Drawing.Point(974, 91);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(122, 64);
+            this.button1.Size = new System.Drawing.Size(56, 56);
             this.button1.TabIndex = 50;
-            this.button1.Text = "Hızlı Reset";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label1.Location = new System.Drawing.Point(970, 175);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(0, 23);
+            this.label1.TabIndex = 51;
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // scoretab
+            // 
+            this.scoretab.AutoSize = true;
+            this.scoretab.BackColor = System.Drawing.Color.Moccasin;
+            this.scoretab.Font = new System.Drawing.Font("Comic Sans MS", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.scoretab.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.scoretab.Location = new System.Drawing.Point(292, 20);
+            this.scoretab.Name = "scoretab";
+            this.scoretab.Size = new System.Drawing.Size(99, 39);
+            this.scoretab.TabIndex = 52;
+            this.scoretab.Text = "label2";
             // 
             // Form2
             // 
@@ -363,6 +387,8 @@
             this.BackgroundImage = global::KartOyunu.Properties.Resources.table;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1064, 608);
+            this.Controls.Add(this.scoretab);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.Left_cards);
             this.Controls.Add(this.Reset);
@@ -446,5 +472,7 @@
         private System.Windows.Forms.Label Left_cards;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label scoretab;
     }
 }

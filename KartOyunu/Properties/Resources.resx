@@ -121,4 +121,58 @@
   <data name="table" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\table.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Illustration3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Illustration3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="png-transparent-computer-icons-symbol-undo-arrow-icon-design-symbol-miscellaneous-angle-text" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\png-transparent-computer-icons-symbol-undo-arrow-icon-design-symbol-miscellaneous-angle-text.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Illustration3-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Illustration3-1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Assets_Art_Audio_Sfx_Click" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Assets_Art_Audio_Sfx_Click.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Assets_Art_Audio_Sfx_Deal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Assets_Art_Audio_Sfx_Deal.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Assets_Art_Audio_Sfx_Draw" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Assets_Art_Audio_Sfx_Draw.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Assets_Art_Audio_Sfx_Error" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Assets_Art_Audio_Sfx_Error.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Assets_Art_Audio_Sfx_Hint" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Assets_Art_Audio_Sfx_Hint.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Assets_Art_Audio_Sfx_Shuffle" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Assets_Art_Audio_Sfx_Shuffle.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="cardsound32562_37691" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cardsound32562-37691.mp3;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="card_sound" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cardsound32562-37691.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="card_switch" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\sounds\card-switch.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="defeat" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\sounds\defeat.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="kazanma_sesi" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\kazanma sesi.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="shuffle_card" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\shuffle-cards-46455.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="shuffle_cards_46455" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\shuffle-cards-46455.mp3;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="start" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\sounds\start.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="win" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\sounds\win.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
 </root>

@@ -46,12 +46,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BitebilenOyun.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="BitebilenOyun.Designer.cs">
-      <DependentUpon>BitebilenOyun.cs</DependentUpon>
-    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -66,9 +60,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="BitebilenOyun.resx">
-      <DependentUpon>BitebilenOyun.cs</DependentUpon>
-    </EmbeddedResource>
+    <Compile Include="Resources\deck.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>deck.resx</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -85,6 +81,10 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Resources\deck.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>deck.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -99,7 +99,119 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Deck\00CardFont.clip" />
+    <None Include="Resources\Deck\DeckBack.clip" />
     <None Include="Resources\table.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\png-transparent-computer-icons-symbol-undo-arrow-icon-design-symbol-miscellaneous-angle-text.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Illustration3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Illustration3-1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Assets_Art_Audio_Sfx_Hint.wav" />
+    <None Include="Resources\Assets_Art_Audio_Sfx_Error.wav" />
+    <None Include="Resources\Assets_Art_Audio_Sfx_Draw.wav" />
+    <None Include="Resources\Assets_Art_Audio_Sfx_Deal.wav" />
+    <None Include="Resources\Assets_Art_Audio_Sfx_Click.wav" />
+    <None Include="Resources\Assets_Art_Audio_Sfx_Shuffle.wav" />
+    <None Include="Resources\cardsound32562-37691.mp3" />
+    <None Include="Resources\cardsound32562-37691.wav" />
+    <None Include="Resources\B1.jpg" />
+    <None Include="Resources\B2.jpg" />
+    <None Include="Resources\B3.jpg" />
+    <None Include="Resources\B4.jpg" />
+    <None Include="Resources\B5.jpg" />
+    <None Include="Resources\B6.jpg" />
+    <None Include="Resources\B7.jpg" />
+    <None Include="Resources\B8.jpg" />
+    <None Include="Resources\B9.jpg" />
+    <None Include="Resources\B10.jpg" />
+    <None Include="Resources\DeckBack.jpg" />
+    <Content Include="Resources\Deck\B1.jpg" />
+    <Content Include="Resources\Deck\B10.jpg" />
+    <Content Include="Resources\Deck\B2.jpg" />
+    <Content Include="Resources\Deck\B3.jpg" />
+    <Content Include="Resources\Deck\B4.jpg" />
+    <Content Include="Resources\Deck\B5.jpg" />
+    <Content Include="Resources\Deck\B6.jpg" />
+    <Content Include="Resources\Deck\B7.jpg" />
+    <Content Include="Resources\Deck\B8.jpg" />
+    <Content Include="Resources\Deck\B9.jpg" />
+    <Content Include="Resources\Deck\DeckBack.jpg" />
+    <Content Include="Resources\Deck\G1.jpg" />
+    <Content Include="Resources\Deck\G10.jpg" />
+    <Content Include="Resources\Deck\G2.jpg" />
+    <Content Include="Resources\Deck\G3.jpg" />
+    <Content Include="Resources\Deck\G4.jpg" />
+    <Content Include="Resources\Deck\G5.jpg" />
+    <Content Include="Resources\Deck\G6.jpg" />
+    <Content Include="Resources\Deck\G7.jpg" />
+    <Content Include="Resources\Deck\G8.jpg" />
+    <Content Include="Resources\Deck\G9.jpg" />
+    <Content Include="Resources\Deck\O1.jpg" />
+    <Content Include="Resources\Deck\O10.jpg" />
+    <Content Include="Resources\Deck\O2.jpg" />
+    <Content Include="Resources\Deck\O3.jpg" />
+    <Content Include="Resources\Deck\O4.jpg" />
+    <Content Include="Resources\Deck\O5.jpg" />
+    <Content Include="Resources\Deck\O6.jpg" />
+    <Content Include="Resources\Deck\O7.jpg" />
+    <Content Include="Resources\Deck\O8.jpg" />
+    <Content Include="Resources\Deck\O9.jpg" />
+    <Content Include="Resources\Deck\R1.jpg" />
+    <Content Include="Resources\Deck\R10.jpg" />
+    <Content Include="Resources\Deck\R2.jpg" />
+    <Content Include="Resources\Deck\R3.jpg" />
+    <Content Include="Resources\Deck\R4.jpg" />
+    <Content Include="Resources\Deck\R5.jpg" />
+    <Content Include="Resources\Deck\R6.jpg" />
+    <Content Include="Resources\Deck\R7.jpg" />
+    <Content Include="Resources\Deck\R8.jpg" />
+    <Content Include="Resources\Deck\R9.jpg" />
+    <None Include="Resources\R10.jpg" />
+    <None Include="Resources\R1.jpg" />
+    <None Include="Resources\R2.jpg" />
+    <None Include="Resources\R3.jpg" />
+    <None Include="Resources\R4.jpg" />
+    <None Include="Resources\R5.jpg" />
+    <None Include="Resources\R6.jpg" />
+    <None Include="Resources\R7.jpg" />
+    <None Include="Resources\R8.jpg" />
+    <None Include="Resources\R9.jpg" />
+    <None Include="Resources\kazanma sesi.wav" />
+    <None Include="Resources\kart tıklama sesi.wav.mp3" />
+    <None Include="Resources\shuffle-cards-46455.mp3" />
+    <None Include="Resources\shuffle-cards-46455.wav" />
+    <None Include="Resources\G1.jpg" />
+    <None Include="Resources\G2.jpg" />
+    <None Include="Resources\G3.jpg" />
+    <None Include="Resources\G4.jpg" />
+    <None Include="Resources\G5.jpg" />
+    <None Include="Resources\G6.jpg" />
+    <None Include="Resources\G7.jpg" />
+    <None Include="Resources\G8.jpg" />
+    <None Include="Resources\G9.jpg" />
+    <None Include="Resources\G10.jpg" />
+    <None Include="Resources\O1.jpg" />
+    <None Include="Resources\O2.jpg" />
+    <None Include="Resources\O3.jpg" />
+    <None Include="Resources\O4.jpg" />
+    <None Include="Resources\O5.jpg" />
+    <None Include="Resources\O6.jpg" />
+    <None Include="Resources\O7.jpg" />
+    <None Include="Resources\O8.jpg" />
+    <None Include="Resources\O9.jpg" />
+    <None Include="Resources\O10.jpg" />
+    <Content Include="Resources\Sounds\start.wav" />
+    <Content Include="Resources\Sounds\card-switch.wav" />
+    <Content Include="Resources\Sounds\kart tıklama sesi.wav.mp3" />
+    <Content Include="Resources\Sounds\defeat.wav" />
+    <Content Include="Resources\Sounds\win.wav" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
