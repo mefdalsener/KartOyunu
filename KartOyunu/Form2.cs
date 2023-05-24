@@ -42,6 +42,9 @@ namespace KartOyunu
             visible_table();
             Left_cards.Text = ("Kalan Kart:" + sec_deck_remaining);
             scoretab.Text = "0";
+            label2.Text = "0";
+            label3.Text = "0";
+            timer1.Start();
         }
 
         public void visible_table()
@@ -305,6 +308,24 @@ namespace KartOyunu
             }
             
 
+        }
+
+        int sayac = 0;
+        int min = 0;
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            timer1.Interval = 1000;
+            sayac++;
+            label2.Text = Convert.ToString(sayac);
+            if (sayac == 60)
+            {
+                min++;
+                label3.Text = Convert.ToString(min);
+            }
+            if (Card11.Visible == false && Card14.Visible == false && Card12.Visible == false && Card13.Visible == false && sec_deck_remaining == 0)
+            {
+                timer1.Stop();
+            }
         }
 
         private void Card54_Click(object sender, EventArgs e)
@@ -633,5 +654,7 @@ namespace KartOyunu
         {
             
         }
+
+        
     }
 }
